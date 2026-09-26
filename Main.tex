@@ -1,0 +1,126 @@
+
+\documentclass[12pt]{report}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{listings}
+\usepackage{datatool}
+\usepackage{layout}
+\usepackage{titlecaps}
+\usepackage{titlesec}
+\usepackage{url}
+\usepackage[backend=biber, sorting=none, bibstyle=numeric,]{biblatex}
+\addbibresource{References/references_zotero.bib}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{blindtext}
+\usepackage[version=4]{mhchem}
+\usepackage{fontspec}
+\usepackage{caption}
+\usepackage{dnaseq}
+\usepackage[
+    protrusion=true,
+    activate={true,nocompatibility},
+    final,
+    tracking=true,
+    factor=1100]{microtype}
+\SetTracking{encoding={*}, shape=sc}{40}
+\setmainfont{arial}
+\usepackage{array}% required for text wrapping in tables
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{tabularx}
+\usepackage{caption}
+\rowcolors{2}{lightgray!40}{lightgray!15}
+\definecolor{lightgray}{gray}{0.9}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcommand{\ul}{\(\mu\)l \ }
+\newcommand{\C}{\(^\circ\)C}
+\newcommand{\image}[1]{
+    \begin{center}
+        \includegraphics[width=0.9\textwidth]{#1}
+    \end{center}
+}
+\setlength{\arrayrulewidth}{0.09em}
+
+\DeclareBibliographyDriver{std}{
+  \usebibmacro{bibindex}
+  \usebibmacro{begentry}
+  \usebibmacro{author/editor+others/translator+others}
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}
+  \newunit\newblock
+  \usebibmacro{date}
+    \newunit\newblock
+  \usebibmacro{journal}
+  \newunit\newblock
+\usebibmacro{finentry}}
+  
+\DeclareBibliographyAlias{article}{std}
+\DeclareBibliographyAlias{book}{std}
+\DeclareBibliographyAlias{booklet}{std}
+\DeclareBibliographyAlias{collection}{std}
+\DeclareBibliographyAlias{inbook}{std}
+\DeclareBibliographyAlias{incollection}{std}
+\DeclareBibliographyAlias{inproceedings}{std}
+\DeclareBibliographyAlias{manual}{std}
+\DeclareBibliographyAlias{misc}{std}
+\DeclareBibliographyAlias{online}{std}
+\DeclareBibliographyAlias{patent}{std}
+\DeclareBibliographyAlias{periodical}{std}
+\DeclareBibliographyAlias{proceedings}{std}
+\DeclareBibliographyAlias{report}{std}
+\DeclareBibliographyAlias{thesis}{std}
+\DeclareBibliographyAlias{unpublished}{std}
+\DeclareBibliographyAlias{*}{std}
+
+\graphicspath{{Images/}}
+
+
+\title{Dissertation} 
+\author{Julius Tismer}
+\date{May 2024}
+
+\begin{document}
+%titlepage
+\thispagestyle{empty}
+\begin{center}
+\begin{minipage}{0.75\linewidth}
+    \centering
+%University logo
+   \includegraphics[width=0.5\textwidth]{Logo.png}
+    \vspace{3cm}
+    
+%Thesis title
+    {\Large the title of my thesis project which may span multiple lines\par}
+    \vspace{2cm}
+
+%Name
+    {\Large Dissertation \\ zur \\  Erlangung des Grades eines Doktors der Medizin  der Universität Witten/Herdecke} 
+    \vspace{1cm}
+    
+    \large Fakultät für Gesundheit \par
+    \vspace{3cm}
+    \end{minipage}
+ \end{center}   
+
+Vorgelegt von Julius Tismer \\ aus Wuppertal \\ 2024
+
+\clearpage
+
+\tableofcontents
+
+
+\include{1. Introduction/Introduction.tex}
+\include{2. Materials and Methods/Materials and Methods.tex}
+\include{3. Results/Results.tex}
+\include{4. Discussion/Discussion.tex}
+\addcontentsline{toc}{chapter}{Bibliography}
+\printbibliography
+\appendix
+\include{5. Appendix/appendix.tex}
+\end{document}
+
+
+
