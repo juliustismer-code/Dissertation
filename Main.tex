@@ -19,12 +19,19 @@
 \usepackage{dnaseq}
 \usepackage[
     protrusion=true,
+    expansion=false,
     activate={true,nocompatibility},
     final,
-    tracking=true,
-    factor=1100]{microtype}
+    tracking=true]{microtype}
 \SetTracking{encoding={*}, shape=sc}{40}
-\setmainfont{arial}
+\setmainfont{Arial}[
+  Path = C:/Windows/Fonts/,
+  UprightFont = *,
+  BoldFont = arialbd,
+  ItalicFont = ariali,
+  BoldItalicFont = arialbi,
+  Extension = .ttf
+]
 \usepackage{array}% required for text wrapping in tables
 \usepackage{float}
 \usepackage{longtable}
@@ -56,7 +63,7 @@
   \usebibmacro{journal}
   \newunit\newblock
 \usebibmacro{finentry}}
-  
+
 \DeclareBibliographyAlias{article}{std}
 \DeclareBibliographyAlias{book}{std}
 \DeclareBibliographyAlias{booklet}{std}
@@ -77,7 +84,6 @@
 
 
 
-test test
 \graphicspath{{Images/}}
 
 
