@@ -17,14 +17,15 @@
 \usepackage{fontspec}
 \usepackage{caption}
 \usepackage{dnaseq}
-\usepackage[
-    protrusion=true,
-    activate={true,nocompatibility},
-    final,
-    tracking=true,
-    factor=1100]{microtype}
-\SetTracking{encoding={*}, shape=sc}{40}
-\setmainfont{arial}
+\usepackage[protrusion=true, expansion=false, tracking=true]{microtype}
+\setmainfont{Arial}[
+  Path = C:/Windows/Fonts/,
+  UprightFont = *,
+  BoldFont = arialbd,
+  ItalicFont = ariali,
+  BoldItalicFont = arialbi,
+  Extension = .ttf
+]
 \usepackage{array}% required for text wrapping in tables
 \usepackage{float}
 \usepackage{longtable}
@@ -56,7 +57,7 @@
   \usebibmacro{journal}
   \newunit\newblock
 \usebibmacro{finentry}}
-  
+
 \DeclareBibliographyAlias{article}{std}
 \DeclareBibliographyAlias{book}{std}
 \DeclareBibliographyAlias{booklet}{std}
@@ -74,6 +75,8 @@
 \DeclareBibliographyAlias{thesis}{std}
 \DeclareBibliographyAlias{unpublished}{std}
 \DeclareBibliographyAlias{*}{std}
+
+
 
 \graphicspath{{Images/}}
 
