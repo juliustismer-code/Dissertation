@@ -45,6 +45,17 @@
 }
 \setlength{\arrayrulewidth}{0.09em}
 
+
+\usepackage{acro}
+\acsetup{
+  make-links = false,       
+  list/heading = chapter*,  % bzw. section* bei article
+  list/name = List of Abbreviations,
+  list/template = longtable, 
+  first-style = long-short}  % beim ersten Auftreten: "Langform (KURZ)"
+\input{Abbreviations.tex}
+
+
 \DeclareBibliographyDriver{std}{
   \usebibmacro{bibindex}
   \usebibmacro{begentry}
