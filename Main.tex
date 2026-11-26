@@ -69,6 +69,20 @@
   \newunit\newblock
 \usebibmacro{finentry}}
 
+\DeclareBibliographyDriver{web}{
+  \usebibmacro{bibindex}
+  \usebibmacro{begentry}
+  \usebibmacro{author/editor+others/translator+others}
+  \setunit{\labelnamepunct}\newblock
+  \usebibmacro{title}
+  \newunit\newblock
+  \usebibmacro{date}
+    \newunit\newblock
+  \usebibmacro{journal}
+  \newunit\newblock
+  \usebibmacro{url}
+\usebibmacro{finentry}}
+
 \DeclareBibliographyAlias{article}{std}
 \DeclareBibliographyAlias{book}{std}
 \DeclareBibliographyAlias{booklet}{std}
@@ -78,7 +92,7 @@
 \DeclareBibliographyAlias{inproceedings}{std}
 \DeclareBibliographyAlias{manual}{std}
 \DeclareBibliographyAlias{misc}{std}
-\DeclareBibliographyAlias{online}{std}
+\DeclareBibliographyAlias{online}{web}
 \DeclareBibliographyAlias{patent}{std}
 \DeclareBibliographyAlias{periodical}{std}
 \DeclareBibliographyAlias{proceedings}{std}
