@@ -1,26 +1,33 @@
 \chapter{Introduction}
+\setlength{\emergencystretch}{2em}
 
 \section{Adenoviruses}
 Adenoviruses are among the largest DNA viruses \cite{heimAdenoviren2016a}. They were first discovered in adenoid tissue cultures undergoing spontaneous degeneration, hence the name \cite{roweIsolationCytopathogenicAgent1953}. Collectively, they infect most species \cite{harrachAdenovirusesAnimalKingdom2019}. \acp{hadv} mostly cause mild upper respiratory or gastrointestinal disease. A notable exeption is the epidemic keratoconjuntivitis caused by \ac{hadv-d} \cite{pettitChronicKeratoconjunctivitisAssociated1979}. Severe disease is possible in immunocompetent hosts, albeit uncommon. \cite{parkThinsectionComputedTomography2017}. Immunocompromised hosts, such as organ transplat reciepients, have increased risk for severe disease. Clinical manifestations in this group are broad and include pneumonia, hepatitis and meningitis \cite{ljungmanRespiratoryVirusInfection1989}. 
 \\ 
 The repertoire of adenovirus types is vast. To date, there are 118 known subtypes across seven \acs{hadv} species \cite{dadkhahEvolutionHumanAdenoviruses2026}. The following table contains the currently described adenovirus types. The latest, \acs{hadv-d}-118, was added in august 2026 \cite{HAdVWorkingGroupb}. \ac{ad5} is the most studied and widely used adenovirus in current clinical applications \cite{salauddinClinicalApplicationAdenovirus2024}.
 
+\newpage
+
 \begin{longtable}{L{0.45\linewidth} R{0.45\linewidth}}
 \rowcolor{white}
 \caption{Adenovirus Types}
-\label{tab:hadv types}
+\label{tab:hadv-types}
 \\
-\hline
-\textbf{Species}& \textbf{Sero/Genotype(s)}\\                           
+\toprule
+\textbf{Species}& \textbf{Sero/Genotype(s)}\\
+\midrule                     
 \endfirsthead
 \rowcolor{white}
-\caption{Continuation}
+\caption[]{Continuation}
 \\
-\hline
-\textbf{Species}& \textbf{Sero/Genoype(s)}\\ 
+\toprule
+\textbf{Species}& \textbf{Sero/Genotype(s)}\\ 
+\midrule
 \endhead
-\hline
+\midrule
 \endfoot
+\bottomrule
+\endlastfoot
 HAdV-A & 12, 18, 31, 61\\ 
 HAdV-B & 3, 7, 11, 14, 16, 21, 34, 35, 55, 66, 68, 76, 77, 78, 79, 106, 114, 117\\
 HAdV-C & 1, 2, 5, 6, 57, 89, 104, 108\\
@@ -38,9 +45,43 @@ HAdV-G & 52\\
 
 \section{Human Adenovirus Type 5}
 
+\ac{ad5} is a non-enveloped, \ac{dsdna} virus. The virus capsid measures $\sim$95 nm and has an icosaedric shape \cite{fabryQuasiatomicModelHuman2005}. The most abundant strucural element of the capsid are 240 hexon protein trimeres. At the vertices of the virion sit 12 penton pentameres, each anchoring a fiber multimere protruding outwards from the base \cite{liuModelTrimericFiber2011}. Mutliple smaller proteins aid in stabilizing the capsid and localizing the genome to the structural multimeres.
 
 
-\section{Adenovirus infecion cycle}
+
+\begin{longtable}{L{0.2\linewidth} R{0.3\linewidth} L{0.4\linewidth}}
+\rowcolor{white}
+\caption{Structural proteins of human adenovirus type 5}
+\label{tab:ad5-structural-proteins}
+\\
+\toprule
+\textbf{Protein} & \textbf{Copies per virion} & \textbf{Category}\\
+\midrule
+\endfirsthead
+\rowcolor{white}
+\caption[]{Continuation}
+\\
+\toprule
+\textbf{Protein} & \textbf{Copies per virion} & \textbf{Category}\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+Hexon (II)         & 720 (240 trimers)   & Major capsid protein\\
+Penton base (III)  & 60 (12 pentamers)   & Major capsid protein\\
+Fiber (IV)         & 36 (12 trimers)     & Major capsid protein\\
+Protein IIIa       & 60 \cite{daiAtomicStructuresMinor2017} & Minor (cement) protein\\
+Protein VI         & $\sim$360           & Minor (cement) protein\\
+Protein VIII       & 120 \cite{daiAtomicStructuresMinor2017} & Minor (cement) protein\\
+Protein IX         & 240                 & Minor (cement) protein\\
+Protein V          & 150                 & Core protein\\
+Protein VII        & 500--800            & Core protein\\
+Protein $\mu$ (X)  & 100--300            & Core protein\\
+\end{longtable}
+
+\section{Adenovirus Infection Cycle}
+
+
 
 \section{Adenovirus Early Genes}
 
@@ -58,7 +99,9 @@ As established, adenoviral vectors play an importand role in gene-therapeutic se
 The Ad vector production cell lines transcomplement E1
 
 \section{CRISPR Sequences and Cas Proteins}
-The CRISPR-Cas-System can be described as either of two things: originally, it is a component of the bacterial arsenal to defend against foreign genetic material. After its discovery, it has been studied and employed to accurately and precisely induce strand breaks in DNA, as a means of facilitating genetic engineering. its components are the growing family of \ac{cas} nucleases which do the actual strand-nicking and the \ac{crispr}-Sequences. Long before the role of this system was understood, the repetitive interspaced sequences were discovered in \textit{Escherichia coli} \cite{ishinoNucleotideSequenceIap1987}. The discovery of similar sequences in archaea sparked new interest in the topic, as the presence of similar sequences in phylogenetically distant organisms implies a high level of evolutionary conservation, and as such, a high biological importance \cite{Si2005}. It was later described, that the highly varied spacer sequences represent genetic information of foreign (viral) origin \cite{pourcelCRISPRElementsYersinia2005} \cite{bolotinClusteredRegularlyInterspaced2005} and are accompanied by various associated (Cas) genes \cite{jansenIdentificationGenesThat2002} that execute their function either in maintaining and expanding the \ac{crispr} loci, called class I, or serving as direct effector molecules in the cleavage of foreign DNA or RNA - class II \cite{shmakovSystematicPredictionGenes2018}. At present time, over 30 different ac{cas} genes of both classes and a multitude of subtypes have been described \cite{makarovaEvolutionaryClassificationCRISPR2020}. other essential components of the system are the \ac{crrna} and the \ac{tracrrna}. the \ac{tracrrna} is complimentary in sequence to the targeted foreign DNA or RNA (the protospacer), is derived from the spacer region of the CRISPR locus and has a length of $\simeq$20bp. It directs the effector complex to its target \cite{brounsSmallCRISPRRNAs2008}. \ac{tracrrna} is important for the maturation of the \ac{crrna} and assembly of the final functional effector ribnucleoproteincomplex of \ac{cas} protein and associated RNAs \cite{deltchevaCRISPRRNAMaturation2011}. additionally, the protospacer must be neighbouring a \ac{pam}, varying in sequence depending on the Cas type and class. The \acp{pam}  are not integrated into the spacer sequences but are recognized by the Cas proteins. For example the Cas9 of \textit{s. pyogenes} requires a NGG PAM sequence directly downstream of the crRNA binding site and cleaves 3 base pairs upstream of the PAM. Since crRNA and tracrRNA are two separate molecules, it was then proposed to combine the two into a \ac{sgrna} to facilitate easier application of the system \textit{in vitro} \cite{jinekProgrammableDualRNAguidedDNA2012}. \\\\ To apply the system to edit eukaryotic DNA, the Cas9 sequence is codon optimized and paired with a nuclear localization signal \cite{maliRNAGuidedHumanGenome2013}. For our application, genetically modifying HEK293 cells, we chose Cas9 as it targets DNA and is the most popular and well studied Cas system to date. 
+The CRISPR-Cas system can be described in two ways: originally, it is a bacterial defence component against foreign genetic material. After its discovery, it has been studied and employed to induce precise strand breaks in DNA, thereby facilitating genetic engineering. Its components include the growing family of \ac{cas} nucleases, which perform the strand cleavage, and the \ac{crispr} sequences. Long before the role of this system was understood, repetitive interspersed sequences were discovered in \textit{Escherichia coli} \cite{ishinoNucleotideSequenceIap1987}. The discovery of similar sequences in archaea sparked new interest in the topic, as the presence of similar sequences in phylogenetically distant organisms implies a high level of evolutionary conservation and, consequently, significant biological importance \cite{Si2005}. It was later shown that the highly variable spacer sequences represent genetic information of foreign, viral origin \cite{pourcelCRISPRElementsYersinia2005,bolotinClusteredRegularlyInterspaced2005} and are accompanied by associated Cas genes \cite{jansenIdentificationGenesThat2002}. These genes maintain and expand the \ac{crispr} loci (class I) or act as direct effector molecules in the cleavage of foreign DNA or RNA (class II) \cite{shmakovSystematicPredictionGenes2018}. At present, more than 30 different \ac{cas} genes in both classes and numerous subtypes have been described \cite{makarovaEvolutionaryClassificationCRISPR2020}. Other essential components are the \ac{crrna} and the \ac{tracrrna}. The \ac{crrna} is complementary to the targeted foreign DNA or RNA (the protospacer), is derived from the spacer region of the CRISPR locus, and has a length of approximately 20 bp \cite{brounsSmallCRISPRRNAs2008}. The \ac{tracrrna} is important for the maturation of the \ac{crrna} and for assembly of the final functional effector ribonucleoprotein complex consisting of the \ac{cas} protein and associated RNAs \cite{deltchevaCRISPRRNAMaturation2011}. Additionally, the protospacer must be adjacent to a \ac{pam}, whose sequence varies depending on the Cas type and class. The \acp{pam} are not integrated into the spacer sequences but are recognised by the Cas proteins. For example, Cas9 from \textit{Streptococcus pyogenes} requires an NGG PAM sequence directly downstream of the crRNA binding site and cleaves three base pairs upstream of the PAM. Because crRNA and tracrRNA are separate molecules, they were subsequently combined into a single \ac{sgrna} to facilitate application of the system \textit{in vitro} \cite{jinekProgrammableDualRNAguidedDNA2012}.
+
+To apply the system to edit eukaryotic DNA, the Cas9 sequence is codon-optimised and paired with a nuclear localisation signal \cite{maliRNAGuidedHumanGenome2013}. For our application, genetically modifying HEK293 cells, we chose Cas9 because it targets DNA and is the most popular and thoroughly studied Cas system to date. 
 
 \newpage
 
